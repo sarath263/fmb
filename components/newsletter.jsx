@@ -1,4 +1,4 @@
-export default function Newsletter() {
+export default function Newsletter(props) {
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -23,12 +23,14 @@ export default function Newsletter() {
 
             {/* CTA content */}
             <div className="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left lg:w-1/2">
-              <h3 className="h3 text-white mb-2">Stay in the loop</h3>
-              <p className="text-purple-200 text-lg">Join our newsletter to get top news before anyone else.</p>
+              <h3 className="h3 text-white mb-2">Your BMI is {props.bmi && "is "+props.bmi}</h3>
+              <p className="text-purple-200 text-lg">
+                BMI Categories:
+                  Underweight : {"<"}18.5<br/>
+                  Normal weight : 18.5–24.9<br/>
+                  Overweight : 25–29.9<br/>
+                  Obesity : BMI of 30 or greater</p>
             </div>
-
-            
-
           </div>
 
         </div>
