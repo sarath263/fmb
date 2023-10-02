@@ -5,15 +5,14 @@ import { useReducer, useState } from "react";
 import Newsletter from "./newsletter";
 
 export default function Hero() {
-  const [height, setHeight] = useState();
-  const [weight, setWeight] = useState();
+  const [height, setHeight] = useState(0);
+  const [weight, setWeight] = useState(0);
   const calcBmi=()=>{
     if(!height || !weight){
       return '';
     }
     let h2=height/100;
     h2=h2*h2;
-    console.log(h2);
     return (Math.round((weight/h2) * 10) / 10).toFixed(1);
   }
   
@@ -62,15 +61,14 @@ export default function Hero() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h1 mb-4" data-aos="fade-up">
-              Calculate your BMI easily
+              Calculate your BMI
             </h1>
             <p
               className="text-xl text-gray-400 mb-8"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              Body Mass Index or BMI is the universaly accepted way of
-              calculating the height to weight ratio.
+              Body Mass Index or BMI is the height to weight ratio.
             </p>
             <div className="w-full px-3">
               <input
@@ -78,9 +76,9 @@ export default function Hero() {
                 type="number"
                 className="form-input w-2/5 text-gray-300"
                 placeholder="Height in cms"
-                value={height}
+                value={height || ""}
                 onChange={(e) => {
-                  setHeight(e.target.value);
+                  setHeight(parseFloat(e.target.value));
                 }}
                 required
               />
@@ -90,9 +88,9 @@ export default function Hero() {
                 type="number"
                 className="form-input w-2/5 text-gray-300"
                 placeholder="Weight in kgs"
-                value={weight}
+                value={weight || ""}
                 onChange={(e) => {
-                  setWeight(e.target.value);
+                  setWeight(parseFloat(e.target.value));
                 }}
                 required
               />
