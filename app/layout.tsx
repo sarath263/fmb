@@ -30,6 +30,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <meta charset="utf-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="description" content="FindMyBMI is a free tool that helps you calculate your body mass index (BMI) and provides insights into your BMI value. BMI is a measure of body fat based on height and weight that can be used to assess risk of obesity-related diseases. Use our BMI calculator to learn more about your BMI and what it means for your health"/>
+      <meta name='keywords' content='BMI,BMI calculator,body mass index,find bmi,BMI insights,calculate BMI,BMI meaning,BMI health risks,obesity,weight loss,weight management,health and fitness,online BMI calculator,free BMI calculator,find my bmi'/>
+      <meta name="author" content="FindMyBMI"></meta>
       <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-gray-900 text-gray-200 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden">
           <Header />
