@@ -23,8 +23,7 @@ export const metadata: Metadata = {
   title: 'Find My BMI : Calculate BMI',
   description: 'FindMyBMI is a free tool that helps you calculate your body mass index (BMI) and provides insights into your BMI value. BMI is a measure of body fat based on height and weight that can be used to assess risk of obesity-related diseases. Use our BMI calculator to learn more about your BMI and what it means for your health',
   keywords:'BMI,BMI calculator,body mass index,find bmi,BMI insights,calculate BMI,BMI meaning,BMI health risks,obesity,weight loss,weight management,health and fitness,online BMI calculator,free BMI calculator,find my bmi',
-  author:'FindMyBMI',
-  viewport:'width=device-width, initial-scale=1'
+  creator:'FindMyBMI'
 }
 
 export default function RootLayout({
