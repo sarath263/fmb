@@ -5,6 +5,8 @@ import { Inter, Architects_Daughter } from 'next/font/google'
 import Header from '@/components/ui/header'
 import Banner from '@/components/banner'
 import type { Metadata } from 'next'
+import ReactGA from "react-ga4";
+
 
 const inter = Inter({
   subsets: ['latin'],
@@ -25,12 +27,12 @@ export const metadata: Metadata = {
   keywords:'BMI,BMI calculator,body mass index,find bmi,BMI insights,calculate BMI,BMI meaning,BMI health risks,obesity,weight loss,weight management,health and fitness,online BMI calculator,free BMI calculator,find my bmi',
   creator:'FindMyBMI'
 }
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  ReactGA.initialize("G-H03GY7CWKB");
   return (
     <html lang="en">
       <meta name="google-adsense-account" content="ca-pub-6621105109470694"/>

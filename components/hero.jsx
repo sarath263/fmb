@@ -1,20 +1,20 @@
 "use client"; // This is a client component 👈🏽
 // import VideoThumb from '@/public/images/hero-image-01.jpg'
 // import ModalVideo from '@/components/modal-video'
-import { useReducer, useState } from "react";
+
 import Newsletter from "./newsletter";
+import useHooks from "../app/hooks";
+
 
 export default function Hero() {
-  const [height, setHeight] = useState(0);
-  const [weight, setWeight] = useState(0);
-  const calcBmi=()=>{
-    if(!height || !weight){
-      return '';
-    }
-    let h2=height/100;
-    h2=h2*h2;
-    return (Math.round((weight/h2) * 10) / 10).toFixed(1);
-  }
+  const {
+    height,
+    setHeight,
+    weight,
+    setWeight,
+    bmi,
+    category
+  }=useHooks();
   
   return (
     <section>
@@ -61,14 +61,14 @@ export default function Hero() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h1 mb-4" data-aos="fade-up">
-              Calculate your BMI
+              Know your height to weight ratio.
             </h1>
             <p
               className="text-xl text-gray-400 mb-8"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              Body Mass Index or BMI is the height to weight ratio.
+              Don't you want to know if weight is matched with your height? Calculate your BMI.
             </p>
             <div className="w-full px-3">
               <input
@@ -97,7 +97,7 @@ export default function Hero() {
             </div>
             <br />
 
-            <Newsletter bmi={calcBmi()}/>
+            <Newsletter bmi={bmi} category={category}/>
           </div>
 
           {/* <ModalVideo
