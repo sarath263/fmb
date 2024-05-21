@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ReactGA from "react-ga4";
+
 const useHooks = () => {
   const [height, setHeight] = useState(0);
   const [weight, setWeight] = useState(0);
@@ -79,7 +79,6 @@ const useHooks = () => {
 
   useEffect(() => {
     calcBmi();
-    ReactGA.send({ hitType: "pageview", page: "/", title: "BMI calculator " });
   }, [height, weight]);
 
   return {
