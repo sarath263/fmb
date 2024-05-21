@@ -4,8 +4,8 @@ import { Inter, Architects_Daughter } from 'next/font/google'
 
 import Header from '@/components/ui/header'
 import Banner from '@/components/banner'
-import type { Metadata } from 'next'
-import ReactGA from "react-ga4";
+import  { Metadata } from 'next'
+import TrackingCode from './lib/ga';
 
 
 const inter = Inter({
@@ -21,7 +21,7 @@ const architects_daughter = Architects_Daughter({
   display: 'swap'
 })
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Find My BMI : Calculate BMI',
   description: 'FindMyBMI is a free tool that helps you calculate your body mass index (BMI) and provides insights into your BMI value. BMI is a measure of body fat based on height and weight that can be used to assess risk of obesity-related diseases. Use our BMI calculator to learn more about your BMI and what it means for your health',
   keywords:'BMI,BMI calculator,body mass index,find bmi,BMI insights,calculate BMI,BMI meaning,BMI health risks,obesity,weight loss,weight management,health and fitness,online BMI calculator,free BMI calculator,find my bmi',
@@ -29,13 +29,11 @@ export const metadata: Metadata = {
 }
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
 }) {
-  ReactGA.initialize("G-H03GY7CWKB");
   return (
     <html lang="en">
       <meta name="google-adsense-account" content="ca-pub-6621105109470694"/>
+      <TrackingCode />
       <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-gray-900 text-gray-200 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden">
           <Header />
