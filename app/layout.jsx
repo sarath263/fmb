@@ -24,7 +24,7 @@ const architects_daughter = Architects_Daughter({
 export const metadata = {
   title: 'Find My BMI : Calculate BMI',
   description: 'FindMyBMI is a free tool that helps you calculate your body mass index (BMI) and provides insights into your BMI value. BMI is a measure of body fat based on height and weight that can be used to assess risk of obesity-related diseases. Use our BMI calculator to learn more about your BMI and what it means for your health',
-  keywords:'BMI,BMI calculator,body mass index,find bmi,BMI insights,calculate BMI,BMI meaning,BMI health risks,obesity,weight loss,weight management,health and fitness,online BMI calculator,free BMI calculator,find my bmi',
+  keywords:'bmi,bmi calculator,body mass index,find bmi,calculate BMI,BMI meaning,BMI health risks,health,weight loss,height weight,health insurance,mental health,what is health,weight management,health and fitness,BMI insights,calculator bmi,bmi chart,online BMI calculator,free BMI calculator,find my bmi,calculator,japan',
   creator:'FindMyBMI'
 }
 export default function RootLayout({
