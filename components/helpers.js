@@ -1,6 +1,5 @@
 export const BMI = ({bmi}) => {
     let render = "";
-    console.log({bmi});
     if (bmi && bmi>10 && bmi<90) {
       render = (
         <>
