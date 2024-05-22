@@ -1,6 +1,6 @@
 import {BMI,  Explanation} from './helpers'
 
-export default function Newsletter({bmi,category}) {
+export default function Newsletter({bmi,category,better}) {
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -48,7 +48,7 @@ export default function Newsletter({bmi,category}) {
               <BMI bmi={bmi}/>
             </div>
             <div className="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left lg:w-1/2">
-              {category!==false?<Explanation cat={category}/> :
+              {category!==false?<Explanation cat={category} better={better}/> :
                 <p className="text-purple-200 text-lg">
                   <b>BMI Categories</b>
                   <br />

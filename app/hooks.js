@@ -51,7 +51,7 @@ const useHooks = () => {
         nextBetter = 24.9;
         break;
       case 2:
-        nextBetter = 29.9;
+        nextBetter = 24.9;
         break;
       default:
         nextBetter = 0;
@@ -89,6 +89,7 @@ const useHooks = () => {
     bmi,
     setBmi,
     category,
+    better
   };
 };
 export default useHooks;

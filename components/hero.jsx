@@ -13,7 +13,8 @@ export default function Hero() {
     weight,
     setWeight,
     bmi,
-    category
+    category,
+    better
   }=useHooks();
   
   return (
@@ -60,6 +61,8 @@ export default function Hero() {
         <div className="relative pt-32 pb-10 md:pt-40 md:pb-16">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+            <h2 className="hidden">Body Mass Index</h2>
+            <h2 className="hidden">BMI</h2>
             <h1 className="h1 mb-4" data-aos="fade-up">
               Know your height to weight ratio.
             </h1>
@@ -97,7 +100,7 @@ export default function Hero() {
             </div>
             <br />
 
-            <Newsletter bmi={bmi} category={category}/>
+            <Newsletter bmi={bmi} better={better} category={category}/>
           </div>
 
           {/* <ModalVideo
