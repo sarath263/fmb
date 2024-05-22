@@ -33,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <meta name="google-adsense-account" content="ca-pub-6621105109470694"/>
+      <meta name="msvalidate.01" content="56AAC5F4CCF032F8074CDD189165ADF1" />
       <TrackingCode />
       <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-gray-900 text-gray-200 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden">
