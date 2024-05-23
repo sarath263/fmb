@@ -4,6 +4,7 @@
 
 import Newsletter from "./newsletter";
 import useHooks from "../app/hooks";
+import { createRef, useEffect } from "react";
 
 
 export default function Hero() {
@@ -16,6 +17,12 @@ export default function Hero() {
     category,
     better
   }=useHooks();
+  let weightRef = createRef();
+  useEffect(()=>{
+    if (bmi && bmi>10 && bmi<88) {
+      weightRef.current.blur();
+    }
+  },[bmi])
   
   return (
     <section>
@@ -64,15 +71,15 @@ export default function Hero() {
             <h2 className="hidden">Body Mass Index</h2>
             <h2 className="hidden">BMI</h2>
             <h1 className="h1 mb-4" data-aos="fade-up">
-              Know your height to weight ratio.
+              Know if your weight matches with height.
             </h1>
-            <p
+            <h4
               className="text-xl text-gray-400 mb-8"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              Don't you want to know if weight is matched with your height? Calculate your BMI.
-            </p>
+              Don't you want to know your height to weight ratio? Calculate your BMI.
+            </h4>
             <div className="w-full px-3">
               <input
                 id="height"
@@ -88,6 +95,7 @@ export default function Hero() {
               <span>&nbsp;&nbsp;</span>
               <input
                 id="weight"
+                ref={weightRef}
                 type="number"
                 className="form-input w-2/5 text-gray-300"
                 placeholder="Weight in kgs"
