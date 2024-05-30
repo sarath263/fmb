@@ -5,6 +5,8 @@
 import Newsletter from "./newsletter";
 import useHooks from "../app/hooks";
 import { createRef, useEffect } from "react";
+import Script from "next/script";
+import {monetag1,monetag2} from "../app/lib/scripts.js";
 
 
 export default function Hero() {
@@ -70,7 +72,7 @@ export default function Hero() {
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h2 className="hidden">Body Mass Index</h2>
             <h2 className="hidden">BMI</h2>
-            <h1 className="h1 mb-4" data-aos="fade-up">
+            <h1 className="h1 mb-4" >
               Know if your weight matches with height.
             </h1>
             <h4
@@ -121,6 +123,23 @@ export default function Hero() {
             videoHeight={1080} /> */}
         </div>
       </div>
+      <Script defer type="text/javascript">{`
+          atOptions = {
+            'key' : 'dc33d6b06bac2733d2a1e2bb8ea59286',
+            'format' : 'iframe',
+            'height' : 300,
+            'width' : 160,
+            'params' : {}
+          };
+      `}
+      </Script>
+      <Script defer type="text/javascript" src="//www.topcreativeformat.com/dc33d6b06bac2733d2a1e2bb8ea59286/invoke.js"></Script>
+      <Script data-cfasync="false"  type="text/javascript">
+        {monetag1}
+      </Script>
+      <Script >
+      {monetag2}
+      </Script>
     </section>
   );
 }

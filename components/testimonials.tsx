@@ -29,7 +29,7 @@ export default function Testimonials() {
                   </svg>
                 </div>
               </div>
-              <blockquote className="text-lg text-gray-400 grow">— Fuel your body with nutritious foods: Focus on a balanced diet rich in fruits, vegetables, and whole grains. These foods are packed with essential vitamins, minerals, and fiber, which keep you feeling full and satisfied while avoiding excess calories.</blockquote>
+              <blockquote className="text-lg text-gray-400 grow">— <b>Fuel your body with nutritious foods</b>: Focus on a balanced diet rich in fruits, vegetables, and whole grains. These foods are packed with essential vitamins, minerals, and fiber, which keep you feeling full and satisfied while avoiding excess calories.</blockquote>
               
             </div>
 
@@ -43,7 +43,7 @@ export default function Testimonials() {
                   </svg>
                 </div>
               </div>
-              <blockquote className="text-lg text-gray-400 grow">— Move your body regularly: Exercise is crucial for burning calories and building muscle mass. Aim for at least 30 minutes of moderate-intensity activity most days of the week. This could be anything from brisk walking or biking to swimming or dancing.</blockquote>
+              <blockquote className="text-lg text-gray-400 grow">— <b>Move your body regularly</b>: Exercise is crucial for burning calories and building muscle mass. Aim for at least 30 minutes of moderate-intensity activity most days of the week. This could be anything from brisk walking or biking to swimming or dancing.</blockquote>
               
             </div>
 
@@ -57,7 +57,7 @@ export default function Testimonials() {
                   </svg>
                 </div>
               </div>
-              <blockquote className="text-lg text-gray-400 grow">— Develop mindful eating habits: Pay attention to your body's hunger and fullness cues. Eat slowly and savor your food, avoiding distractions like screens. This will help you tune into your body's natural signals and prevent overeating.</blockquote>
+              <blockquote className="text-lg text-gray-400 grow">— <b>Develop mindful eating habits</b>: Pay attention to your body's hunger and fullness cues. Eat slowly and savor your food, avoiding distractions like screens. This will help you tune into your body's natural signals and prevent overeating.</blockquote>
               
             </div>
 
