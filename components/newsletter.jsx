@@ -1,44 +1,6 @@
-const renderBMI = (bmi) => {
-  let render = "";
-  if (bmi && bmi>10 && bmi<90) {
-    render = (
-      <>
-        {"is "}
-        <br />
-        <span className="text-teal-500">
-          <b>{bmi}</b>
-        </span>
-      </>
-    );
-  }
-  return (<h3 className="h3 text-white mb-2">
-      {"Your BMI "}
-      <>{render}</>
-    </h3>);
-};
+import {BMI,  Explanation} from './helpers'
 
-const renderExplanation = (bmi) => {
-  let render = null;
-  if(bmi<10 || bmi>90){
-    return render;
-  }
-  if (bmi && bmi < 18.5) {
-    render = <>{"It seems you are having "}<br/><span className="text-yellow-600">{" Underweight"}</span></>;
-  }else if (18.5 <= bmi && bmi <= 24.9) {
-    render = <><span className="text-teal-500">{"Awesome"}</span>{", Your Weight is matched with your Height. "}</>;
-  }else if (25 <= bmi && bmi <= 29.9) {
-    render = <>{"It seems you are having "}<br/><span className="text-yellow-600">{" Overweight"}</span></>;
-  }else if (30 <= bmi) {
-    render = <>{"It seems you are having "}<br/><span className="text-red-800">{" Obesity"}</span></>;
-  }
-
-  if (render) {
-    render = <p className="text-purple-200 text-lg">{render}<br/><br/></p>;
-  }
-  return render;
-};
-
-export default function Newsletter(props) {
+export default function Newsletter({bmi,category,better}) {
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -83,10 +45,10 @@ export default function Newsletter(props) {
           <div className="relative flex flex-col lg:flex-row justify-between items-center">
             {/* CTA content */}
             <div className="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left lg:w-1/2">
-              {renderBMI(props.bmi)}
+              <BMI bmi={bmi}/>
             </div>
             <div className="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left lg:w-1/2">
-              {renderExplanation(props.bmi) ||
+              {category!==false?<Explanation cat={category} better={better}/> :
                 <p className="text-purple-200 text-lg">
                   <b>BMI Categories</b>
                   <br />

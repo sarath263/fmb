@@ -1,20 +1,30 @@
 "use client"; // This is a client component 👈🏽
 // import VideoThumb from '@/public/images/hero-image-01.jpg'
 // import ModalVideo from '@/components/modal-video'
-import { useReducer, useState } from "react";
+
 import Newsletter from "./newsletter";
+import useHooks from "../app/hooks";
+import { createRef, useEffect } from "react";
+import Script from "next/script";
+import {monetag1,monetag2} from "../app/lib/scripts.js";
+
 
 export default function Hero() {
-  const [height, setHeight] = useState(0);
-  const [weight, setWeight] = useState(0);
-  const calcBmi=()=>{
-    if(!height || !weight){
-      return '';
+  const {
+    height,
+    setHeight,
+    weight,
+    setWeight,
+    bmi,
+    category,
+    better
+  }=useHooks();
+  let weightRef = createRef();
+  useEffect(()=>{
+    if (bmi && bmi>10 && bmi<88) {
+      weightRef.current.blur();
     }
-    let h2=height/100;
-    h2=h2*h2;
-    return (Math.round((weight/h2) * 10) / 10).toFixed(1);
-  }
+  },[bmi])
   
   return (
     <section>
@@ -60,16 +70,18 @@ export default function Hero() {
         <div className="relative pt-32 pb-10 md:pt-40 md:pb-16">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">
-              Calculate your BMI
+            <h2 className="hidden">Body Mass Index</h2>
+            <h2 className="hidden">BMI</h2>
+            <h1 className="h1 mb-4" >
+              Know if your weight matches with height.
             </h1>
-            <p
+            <h4
               className="text-xl text-gray-400 mb-8"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              Body Mass Index or BMI is the height to weight ratio.
-            </p>
+              Don't you want to know your height to weight ratio? Calculate your BMI.
+            </h4>
             <div className="w-full px-3">
               <input
                 id="height"
@@ -85,6 +97,7 @@ export default function Hero() {
               <span>&nbsp;&nbsp;</span>
               <input
                 id="weight"
+                ref={weightRef}
                 type="number"
                 className="form-input w-2/5 text-gray-300"
                 placeholder="Weight in kgs"
@@ -97,7 +110,7 @@ export default function Hero() {
             </div>
             <br />
 
-            <Newsletter bmi={calcBmi()}/>
+            <Newsletter bmi={bmi} better={better} category={category}/>
           </div>
 
           {/* <ModalVideo
@@ -110,6 +123,23 @@ export default function Hero() {
             videoHeight={1080} /> */}
         </div>
       </div>
+      <Script defer type="text/javascript">{`
+          atOptions = {
+            'key' : 'dc33d6b06bac2733d2a1e2bb8ea59286',
+            'format' : 'iframe',
+            'height' : 300,
+            'width' : 160,
+            'params' : {}
+          };
+      `}
+      </Script>
+      <Script defer type="text/javascript" src="https://www.topcreativeformat.com/dc33d6b06bac2733d2a1e2bb8ea59286/invoke.js"></Script>
+      <Script defer data-cfasync="false"  type="text/javascript">
+        {monetag1}
+      </Script>
+      <Script defer>
+      {monetag2}
+      </Script>
     </section>
   );
 }
