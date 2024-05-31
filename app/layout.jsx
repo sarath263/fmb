@@ -1,12 +1,9 @@
 import './css/style.css'
-
+import { lazy } from 'react'
 import { Inter, Architects_Daughter } from 'next/font/google'
 
-import Header from '@/components/ui/header'
-import Banner from '@/components/banner'
-import  { Metadata } from 'next'
+const Header = lazy(() => import('@/components/ui/header'));
 import TrackingCode from './lib/ga';
-
 
 const inter = Inter({
   subsets: ['latin'],

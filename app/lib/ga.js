@@ -6,8 +6,8 @@ function TrackingCode() {
   return (
    <>
   {/* Global site tag (gtag.js) - Google Analytics */}
-  <Script async src="https://www.googletagmanager.com/gtag/js?id=G-H03GY7CWKB" ></Script>
-  <Script id="google-analytics" strategy="afterInteractive">
+  <Script defer src="https://www.googletagmanager.com/gtag/js?id=G-H03GY7CWKB" ></Script>
+  <Script defer id="google-analytics" strategy="afterInteractive">
     {`
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments)}

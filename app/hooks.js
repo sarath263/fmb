@@ -17,7 +17,7 @@ const useHooks = () => {
     let h2 = height / 100;
     h2 = h2 * h2;
     let currentBmi = (Math.round((weight / h2) * 10) / 10).toFixed(1);
-    console.log({currentBmi});
+ 
     setBmi(currentBmi);
     calculateCat(currentBmi);
   };
@@ -60,11 +60,7 @@ const useHooks = () => {
       let h2 = height / 100;
       h2 = h2 * h2;
       nextBetter = nextBetter * h2;
-      console.log({nextBetter})
-      console.log({
-        idle: (Math.round(nextBetter  * 10) / 10).toFixed(1),
-        needed: (Math.round((nextBetter - weight) * 10) / 10).toFixed(1),
-      });
+      
       setBetter({
         idle: (Math.round(nextBetter  * 10) / 10).toFixed(1),
         needed: (Math.round((nextBetter - weight) * 10) / 10).toFixed(1),

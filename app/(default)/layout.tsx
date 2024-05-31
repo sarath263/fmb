@@ -1,12 +1,11 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect,lazy } from 'react'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-
-import PageIllustration from '@/components/page-illustration'
-import Footer from '@/components/ui/footer'
+const PageIllustration = lazy(() => import('@/components/page-illustration'));
+const Footer = lazy(() => import('@/components/ui/footer'));
 
 export default function DefaultLayout({
   children,

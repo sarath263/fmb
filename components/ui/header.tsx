@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import MobileMenu from './mobile-menu'
 import LogoImage from '@/public/images/logo.png'
 
 export default function Header() {
@@ -15,29 +14,6 @@ export default function Header() {
             <Image className="rounded-full" src={LogoImage} width={48} height={48} alt="Body Mass Index" />
             </Link>
           </div>
-
-          {/* Desktop navigation */}
-          {/* <nav className="hidden md:flex md:grow">
-
-            <ul className="flex grow justify-end flex-wrap items-center">
-              <li>
-                <Link
-                  href="/signin"
-                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                >
-                  Sign in
-                </Link>
-              </li>
-              <li>
-                <Link href="/signup" className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3">
-                  Sign up
-                </Link>
-              </li>
-            </ul>
-          </nav>
-
-          <MobileMenu /> */}
-
         </div>
       </div>
     </header>

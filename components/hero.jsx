@@ -133,11 +133,11 @@ export default function Hero() {
           };
       `}
       </Script>
-      <Script defer type="text/javascript" src="//www.topcreativeformat.com/dc33d6b06bac2733d2a1e2bb8ea59286/invoke.js"></Script>
-      <Script data-cfasync="false"  type="text/javascript">
+      <Script defer type="text/javascript" src="https://www.topcreativeformat.com/dc33d6b06bac2733d2a1e2bb8ea59286/invoke.js"></Script>
+      <Script defer data-cfasync="false"  type="text/javascript">
         {monetag1}
       </Script>
-      <Script >
+      <Script defer>
       {monetag2}
       </Script>
     </section>
