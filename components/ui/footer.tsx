@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
           {/* Top area: Blocks */}
-          {/* <div className="grid md:grid-cols-12 gap-8 lg:gap-20 mb-8 md:mb-12">
+          {<div className="grid md:grid-cols-12 gap-8 lg:gap-20 mb-8 md:mb-12">
 
 
             <div className="md:col-span-4 lg:col-span-5">
@@ -24,67 +24,64 @@ export default function Footer() {
 
             <div className="md:col-span-8 lg:col-span-7 grid sm:grid-cols-3 gap-8">
 
-              <div className="text-sm">
-                <h6 className="text-gray-200 font-medium mb-1">Products</h6>
+              <div className="text-sm ">
+                <h6 className="text-gray-200 font-medium mb-1 ">Body Mass Index(BMI)</h6>
                 <ul>
                   <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Web Studio</Link>
+                    <Link href="/about-bmi.htm" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">About Body Mass Index </Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">DynamicBox Flex</Link>
+                    <Link href="/lower-your-bmi.htm" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">How to lower your BMI</Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Programming Forms</Link>
+                    <Link href="/health-risks-high-bmi.htm" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Health risks of high BMI</Link>
                   </li>
                 </ul>
               </div>
 
+              <div className="text-sm">
+                <h6 className="text-gray-200 font-medium mb-1 hidden">BMI Calculator</h6>
+                <ul className=" hidden">
+                  <li className="mb-1">
+                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Consectetur adipiscing</Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Labore et dolore</Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Consectetur adipiscing</Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Labore et dolore</Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Consectetur adipiscing</Link>
+                  </li>
+                </ul>
+              </div>
 
               <div className="text-sm">
                 <h6 className="text-gray-200 font-medium mb-1">Resources</h6>
                 <ul>
                   <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Nostrud exercitation</Link>
+                    <Link href="/benefits-of-healthy-bmi.htm" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Benefits of Healthy BMI</Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Visual mockups</Link>
+                    <Link href="/bmi-and-body-types.htm" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">BMI & Body types</Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Nostrud exercitation</Link>
+                    <Link href="/bmi-and-children.htm" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">BMI & Children</Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Visual mockups</Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Nostrud exercitation</Link>
+                    <Link href="/bmi-myths.htm" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Myths about BMI</Link>
                   </li>
                 </ul>
               </div>
 
-              <div className="text-sm">
-                <h6 className="text-gray-200 font-medium mb-1">Company</h6>
-                <ul>
-                  <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Consectetur adipiscing</Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Labore et dolore</Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Consectetur adipiscing</Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Labore et dolore</Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Consectetur adipiscing</Link>
-                  </li>
-                </ul>
-              </div>
 
             </div>
 
-          </div> */}
+          </div> }
 
           {/* Bottom area */}
           <div className="md:flex md:items-center md:justify-between">

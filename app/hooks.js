@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
-
+import {  useSelector } from "./lib/gState";
 const useHooks = () => {
+  const [bmi,setState] = useSelector(s=>s.bmi);
+  const [category] = useSelector(s=>s.category);
   const [height, setHeight] = useState(0);
   const [weight, setWeight] = useState(0);
-  const [bmi, setBmi] = useState("");
-  const [category, setCat] = useState(false);
+  const setCat = (category)=>setState({category});
   const [better, setBetter] = useState({
     idle: 0,
     needed: 0,
   });
+  const setBmi = (bmi)=>setState({bmi});
 
   const calcBmi = () => {
     if (!height || !weight) {
@@ -17,8 +19,11 @@ const useHooks = () => {
     let h2 = height / 100;
     h2 = h2 * h2;
     let currentBmi = (Math.round((weight / h2) * 10) / 10).toFixed(1);
- 
-    setBmi(currentBmi);
+    let isValidBmi=false;
+    if (currentBmi && parseFloat(currentBmi)>8 && parseFloat(currentBmi)<90) {
+      isValidBmi=true;
+    }
+    setState({bmi:currentBmi,isValidBmi});
     calculateCat(currentBmi);
   };
 

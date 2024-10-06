@@ -4,9 +4,10 @@
 
 import Newsletter from "./newsletter";
 import useHooks from "../app/hooks";
-import { createRef, useEffect } from "react";
+import { createRef, useEffect, useRef } from "react";
 import Script from "next/script";
 import {monetag1,monetag2} from "../app/lib/scripts.js";
+import { useSelector } from "../app/lib/gState";
 
 
 export default function Hero() {
@@ -15,16 +16,19 @@ export default function Hero() {
     setHeight,
     weight,
     setWeight,
-    bmi,
     category,
     better
   }=useHooks();
+  const desRef=useRef(null);
+  const [isValidBmi] = useSelector(s=>s.isValidBmi);
+  const [bmi] = useSelector(s=>s.bmi);
   let weightRef = createRef();
   useEffect(()=>{
-    if (bmi && bmi>10 && bmi<88) {
-      weightRef.current.blur();
+    if(isValidBmi){
+      // weightRef.current.blur();
+      desRef.current.scrollIntoView()
     }
-  },[bmi])
+  },[isValidBmi])
   
   return (
     <section>
@@ -72,13 +76,14 @@ export default function Hero() {
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h2 className="hidden">Body Mass Index</h2>
             <h2 className="hidden">BMI</h2>
-            <h1 className="h1 mb-4" >
+            <h1 ref={desRef} className="h1 mb-4" >
               Know if your weight matches with height.
             </h1>
             <h4
               className="text-xl text-gray-400 mb-8"
               data-aos="fade-up"
               data-aos-delay="200"
+              style={{display:isValidBmi?"none":"block"}}
             >
               Don't you want to know your height to weight ratio? Calculate your BMI.
             </h4>

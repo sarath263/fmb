@@ -1,4 +1,17 @@
+import "../app/css/smile.css"
+import { useSelector } from "@/app/lib/gState";
 export const BMI = ({bmi}) => {
+  const [category] = useSelector(s=>s.category);
+  let mood="happy";
+  if (category==-1) {
+    mood = "hmmm";
+  } else if (category == 0) {
+    mood = "happy";
+  } else if (category == 1) {
+    mood = "hmmm";
+  } else if (category == 2) {
+    mood = "angry";
+  }
     let render = "";
     if (bmi && bmi>10 && bmi<90) {
       render = (
@@ -11,11 +24,21 @@ export const BMI = ({bmi}) => {
         </>
       );
     }
-    return (<h3 className="h3 text-white mb-2">
+    return (<span><Smile mood={mood}/><h3 className="h3 text-white mb-2">
         {"Your BMI "}
         <>{render}</>
-      </h3>);
+      </h3></span>);
 };
+const Smile=({mood="happy"})=>{
+  
+  return <div className="content">
+    {mood=="happy" && <div className="emoji happy small"><div className="face"><div className="eye left"></div> <div className="eye right"></div> <div className="mouth"></div></div></div>}
+    
+    {mood=="hmmm" && <div className="emoji neutral small"><div className="face"><div className="eye left"></div> <div className="eye right"></div> <div className="mouth"></div></div></div>}
+    
+    {mood=="angry" && <div className="emoji sad small"><div className="face"><div className="eye left"></div> <div className="eye right"></div> <div className="mouth"></div></div></div>}
+  </div>
+}
   
 export const Explanation = ({cat,better}) => {
     let render = null;
