@@ -25,7 +25,7 @@ export default function Hero() {
   let weightRef = createRef();
   useEffect(()=>{
     if(isValidBmi){
-      // weightRef.current.blur();
+      weightRef.current.blur();
       desRef.current.scrollIntoView()
     }
   },[isValidBmi])
