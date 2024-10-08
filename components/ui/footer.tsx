@@ -16,13 +16,13 @@ export default function Footer() {
                 <h6 className="text-gray-200 font-medium mb-1 ">Body Mass Index(BMI)</h6>
                 <ul>
                   <li className="mb-1">
-                    <Link href="/about-bmi.htm" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">About Body Mass Index </Link>
+                    <Link href="/about-bmi.htm" className="text-gray-400  transition duration-150 ease-in-out">About Body Mass Index </Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/lower-your-bmi.htm" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">How to lower your BMI</Link>
+                    <Link href="/lower-your-bmi.htm" className="text-gray-400  transition duration-150 ease-in-out">How to lower your BMI</Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/health-risks-high-bmi.htm" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Health risks of high BMI</Link>
+                    <Link href="/health-risks-high-bmi.htm" className="text-gray-400  transition duration-150 ease-in-out">Health risks of high BMI</Link>
                   </li>
                 </ul>
               </div>
