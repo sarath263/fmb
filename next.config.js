@@ -42,7 +42,7 @@ const nextConfig = {
     );
     return config;
   },
-  output: 'export'
+  //output: 'export'
 };
 
 module.exports = nextConfig;
