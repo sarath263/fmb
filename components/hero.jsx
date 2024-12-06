@@ -76,7 +76,7 @@ export default function Hero() {
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h2 className="hidden">Body Mass Index</h2>
             <h2 className="hidden">BMI</h2>
-            <h1 ref={desRef} className="h1 mb-4" >
+            <h1 ref={desRef} className="h1 mb-4 hidden" >
               Know if your weight matches with height.
             </h1>
             <h4
