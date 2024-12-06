@@ -6,7 +6,7 @@ import Newsletter from "./newsletter";
 import useHooks from "../app/hooks";
 import { createRef, useEffect, useRef } from "react";
 import Script from "next/script";
-import {monetag1,monetag2} from "../app/lib/scripts.js";
+// import {monetag1,monetag2} from "../app/lib/scripts.js";
 import { useSelector } from "../app/lib/gState";
 
 
@@ -139,12 +139,12 @@ export default function Hero() {
       `}
       </Script>
       <Script defer type="text/javascript" src="https://www.topcreativeformat.com/dc33d6b06bac2733d2a1e2bb8ea59286/invoke.js"></Script>
-      <Script defer data-cfasync="false"  type="text/javascript">
+      {/* <Script defer data-cfasync="false"  type="text/javascript">
         {monetag1}
       </Script>
       <Script defer>
       {monetag2}
-      </Script>
+      </Script> */}
     </section>
   );
 }
