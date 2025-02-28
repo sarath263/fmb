@@ -74,11 +74,11 @@ export default function Hero() {
         <div className="relative pt-32 pb-10 md:pt-40 md:pb-16">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+            <h1 className="hidden">BMI</h1>
             <h2 className="hidden">Body Mass Index</h2>
-            <h2 className="hidden">BMI</h2>
-            <h1 ref={desRef} className="h1 mb-4 hidden" >
+            <h3 ref={desRef} className="h1 mb-4 hidden" >
               Know if your weight matches with height.
-            </h1>
+            </h3>
             <h4
               className="text-xl text-gray-400 mb-8"
               data-aos="fade-up"
@@ -138,8 +138,8 @@ export default function Hero() {
           };
       `}
       </Script>
-      <Script defer type="text/javascript" src="https://www.topcreativeformat.com/dc33d6b06bac2733d2a1e2bb8ea59286/invoke.js"></Script>
-      {/* <Script defer data-cfasync="false"  type="text/javascript">
+      {/* <Script defer type="text/javascript" src="https://www.topcreativeformat.com/dc33d6b06bac2733d2a1e2bb8ea59286/invoke.js"></Script>
+      <Script defer data-cfasync="false"  type="text/javascript">
         {monetag1}
       </Script>
       <Script defer>

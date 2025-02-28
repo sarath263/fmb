@@ -19,10 +19,10 @@ const architects_daughter = Architects_Daughter({
 })
 
 export const metadata = {
-  title: 'BMI Calculator : Calculate Your Body Mass Index by Find My BMI ',
-  description: 'Body Mass Index, BMI is weight(kg) / height(m) squared. 25+ is overweight, healthy is 18.5 to 24.9 . Find My BMI is a free tool that helps you calculate your body mass index (BMI) and provides insights into your BMI value. BMI is a measure of body fat based on height and weight that can be used to assess risk of obesity-related diseases. Use our BMI calculator to learn more about your BMI and what it means for your health.',
-  keywords:'body mass index,bmi,bmi calculator,find bmi,calculate BMI,BMI meaning,BMI health risks,health,weight loss,height weight,health insurance,mental health,what is health,weight management,health and fitness,BMI insights,calculator bmi,bmi chart,online BMI calculator,free BMI calculator,find my bmi,calculator,japan',
-  creator:'FindMyBMI'
+  title: 'BMI Calculator - Calculate Your Body Mass Index | Find My BMI',
+  description: 'BMI calculator. Calculate your BMI with our free tool. Learn your body mass index and understand its impact on your health, check obesity related risks.',
+  keywords: 'BMI calculator, body mass index, calculate BMI, health assessment, weight management, BMI health risks, free BMI tool, online BMI calculator, health and fitness, obesity risk, height weight ratio, BMI insights, Find My BMI',
+  creator: 'Find My BMI'
 }
 export default function RootLayout({
   children,
@@ -31,7 +31,17 @@ export default function RootLayout({
     <html lang="en">
       <meta name="google-adsense-account" content="ca-pub-6621105109470694"/>
       <meta name="msvalidate.01" content="56AAC5F4CCF032F8074CDD189165ADF1" />
+      <meta name="robots" content="index, follow" />
       <link rel="icon" type="image/x-icon" href="./favicon.ico"></link>
+      <link rel="canonical" href="https://findmybmi.in" />
+      <link rel="alternate" href="https://findmybmi.in" hreflang="en" />
+      <meta property="og:title" content="BMI Calculator - Find Your Body Mass Index" />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://findmybmi.in/images/logo.png" />
+      <meta property="og:url" content="https://findmybmi.in" />
+      <meta property="og:description" content="Calculate your BMI with our free tool and understand its impact on your health. Learn more about body mass index and related risks." />
+
+      
       <TrackingCode />
       <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-gray-900 text-gray-200 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden">
